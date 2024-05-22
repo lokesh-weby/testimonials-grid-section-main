@@ -1,0 +1,121 @@
+body{
+   background-color: #edf2f8;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+:root{
+    --card1Bg:#733fc8;
+    --card1Color:#ac8ddf;
+    --card2Bg:#49556b;
+    --lightColor:#9ca6b7;
+    --card3Bg:white;
+    --darkColor:#a0a2a6;
+    --card4Bg:#18202d;
+}
+.grid-content{
+    display: grid;
+    grid-template-areas: "one one two five"
+                         "three four four five";
+    gap: 30px;
+    margin: 5% 10%;
+}
+.header{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+picture img{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+p{
+    margin: unset;
+}
+.white{
+    color: white;
+}
+.black{
+    color: black;
+}
+.name{
+    line-height: 1.2rem;
+}
+.name p:nth-child(1){
+    font-size: 1rem;
+}
+.name p:nth-child(2){
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.profile h5{
+    margin: 10px 0px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.profile .review{
+    font-size: 0.8rem;
+}
+
+.wrapper {
+ margin: auto;
+   
+}
+
+.card-1{
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-position: 85% 0px;
+    background-repeat: no-repeat;
+    background-color: var(--card1Bg);
+    color: var(--card1Color);
+    grid-area: one;
+
+}
+
+.card-2{
+
+    background-color: var(--card2Bg);
+    color: var(--darkColor);
+    grid-area: two;
+}
+.card-3{
+    background-color: white;
+    color: var(--darkColor);
+    grid-area: three;
+}
+.card-4{
+    background-color: var(--card4Bg);
+    color: var(--darkColor);
+    grid-area: four;
+}
+
+  .card-5 {
+      background-color: white;
+      color: var(--lightColor);
+      grid-area: five;
+    
+      
+  }  
+.profile {
+    border-radius: 10px;
+    padding: 20px;
+}
+@media (max-width:1000px){
+    .grid-content{
+        grid-template-areas:"one one two"
+                            "three four four"
+                            "five five five" ;
+    }
+}
+@media (max-width:800px){
+    .grid-content{
+        grid-template-areas:"one"
+                            "two"
+                            "three"
+                            "four"
+                            "five" ;
+    }
+}
